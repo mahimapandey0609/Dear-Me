@@ -1,0 +1,17 @@
+<%-  include('partials/header'); -%>
+<h1>Home</h1>
+<p><%= paragraph %></p>
+<% postHead.forEach(function(element){ %>
+
+  <h3><%= element.composebody%></h3>
+  <% let str = element.textbody; %>
+      <% let length = 100; %>
+      <% let truncate = str.substring(0,length); %>
+      <%  let Estr = " ..." %>
+  <p><%= truncate + Estr %> <a href="/posts/<%= element.composebody %>">Read more</a></p>
+
+<% })%>
+ 
+
+
+<%- include('partials/footer'); -%>
